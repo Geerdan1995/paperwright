@@ -43,20 +43,23 @@ def fit_h(im, h):
     return im.resize((w, h), Image.LANCZOS)
 
 def paste_page(base, im, x, y, rot=0):
-    pad = 10
+    """乳白装裱＋微旋转＋真投影（悬浮感）：RGBA 旋转透明补角，投影由卡片 alpha 生成"""
+    pad = 12
     card = Image.new('RGB', (im.width + pad * 2, im.height + pad * 2), CREAM)
     card.paste(im, (pad, pad))
     if rot:
         card = card.rotate(rot, expand=True, resample=Image.BICUBIC)
-    card_rgba = card.convert('RGBA')
-    sh = Image.new('RGBA', (card.width + 60, card.height + 60), (0, 0, 0, 0))
-    sd = ImageDraw.Draw(sh)
-    sd.rectangle([26, 34, card.width + 26, card.height + 26], fill=(0, 0, 0, 110))
-    sh = sh.filter(ImageFilter.GaussianBlur(14))
-    px, py = x - 24, y - 24
-    patch = base.crop((max(0, px), max(0, py), min(base.width, px + sh.width), min(base.height, py + sh.height)))
-    base.paste(Image.new('RGB', patch.size, INK_BG2), (max(0, px), max(0, py)), sh.crop((max(0, -px), max(0, -py), max(0, -px) + patch.width, max(0, -py) + patch.height)))
-    base.paste(card_rgba, (x, y), card_rgba)
+    card = card.convert('RGBA')
+    # 投影层：卡片 alpha → 墨绿黑 → 右下偏移 → 高斯羽化
+    alpha = card.split()[3].point(lambda v: int(v * 0.55))
+    shadow_card = Image.new('RGBA', card.size, (6, 18, 14, 255))
+    shadow_card.putalpha(alpha)
+    sh = Image.new('RGBA', base.size, (0, 0, 0, 0))
+    sh.paste(shadow_card, (x + 18, y + 28), shadow_card)
+    sh = sh.filter(ImageFilter.GaussianBlur(16))
+    base.paste(Image.new('RGB', base.size, (10, 28, 22)), (0, 0), sh)
+    # 卡片本体
+    base.paste(card, (x, y), card)
     return card.width, card.height
 
 # ================= hero.png 1568×688 =================
@@ -65,9 +68,9 @@ hero = dark_bg(W, H)
 hero = dot_grid(hero)
 d = ImageDraw.Draw(hero)
 d.text((W - 640, H - 210), 'PAPERWRIGHT', font=f(64, True), fill=INK_BG2, stroke_width=1, stroke_fill=(96, 130, 108))
-paste_page(hero, fit_h(load('cover'), 468), 596, 96, rot=-2)
-paste_page(hero, fit_h(load('opener'), 468), 956, 64, rot=1.5)
-paste_page(hero, fit_h(load('running'), 468), 1296, 118, rot=-1)
+paste_page(hero, fit_h(load('cover'), 440), 612, 110, rot=-2)
+paste_page(hero, fit_h(load('opener'), 440), 948, 80, rot=1.5)
+paste_page(hero, fit_h(load('running'), 372), 1248, 148, rot=-1)
 d.text((84, 96), 'Paperwright 页匠', font=f(58, True), fill=CREAM)
 d.rectangle([88, 196, 88 + 64, 200], fill=AMBER)
 d.text((84, 222), 'From a web archive,', font=f(26), fill=CREAM_DIM)

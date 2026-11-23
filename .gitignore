@@ -2,6 +2,6 @@ __pycache__/
 *.pyc
 output/
 crawl/
-assets/
+
 node_modules/
 *.log

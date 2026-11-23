@@ -1,0 +1,188 @@
+/* 产品沉思录 · 印刷全集 —— A4 宋本版式（正文 12pt，与前两本大字版同阶梯） */
+
+:root {
+  --body-font: "Noto Serif SC", "Songti SC", serif;
+  --head-font: "Noto Sans SC", sans-serif;
+  --mono-font: "JetBrains Mono", monospace;
+  --ink: #1c1c1c;
+  --gray: #6b6b6b;
+  --light: #9a9a9a;
+  --green: #204f40;
+  --green-soft: #2a5c4b;
+  --amber: #b08530;
+  --amber-soft: #e3c273;
+  --line: #d8d5cc;
+  --bg-warm: #f7f5ef;
+}
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: var(--body-font); font-size: 12pt; line-height: 1.85; color: var(--ink); }
+
+/* ============ 正文 ============ */
+main.book { }
+
+/* 辑扉 */
+section.topic-opener { break-before: page; padding-top: 58mm; text-align: center; }
+.topic-opener .to-kicker { font-family: var(--head-font); font-size: 11pt; letter-spacing: 6px; color: var(--amber); margin-bottom: 10mm; }
+.topic-opener .to-name { font-family: var(--head-font); font-weight: 700; font-size: 30pt; color: var(--green); margin: 0 0 6mm; letter-spacing: 2px; }
+.topic-opener .to-count { font-size: 11pt; color: var(--gray); letter-spacing: 2px; }
+.topic-opener .to-rule { width: 24mm; height: 1.2pt; background: var(--amber-soft); margin: 8mm auto 0; }
+
+/* 文章单元 */
+section.unit.article { break-before: page; padding-top: 28mm; }
+.a-kicker { font-family: var(--head-font); font-size: 10pt; letter-spacing: 5px; color: var(--amber); margin-bottom: 4mm; }
+.a-head { margin-bottom: 6mm; }
+.a-tags { font-family: var(--head-font); font-size: 9pt; color: var(--amber); letter-spacing: 1.5px; margin-bottom: 3mm; }
+h2.a-title { font-family: var(--head-font); font-weight: 700; font-size: 22pt; line-height: 1.35; color: var(--green); margin: 0 0 3mm; }
+.a-byline { font-size: 10pt; color: var(--gray); }
+.a-byline .dot { margin: 0 3px; color: var(--light); }
+.a-head::after { content: ""; display: block; width: 100%; border-bottom: 1.1pt solid var(--line); margin-top: 4.5mm; }
+
+figure.a-hero { margin: 6mm 0 2mm; }
+figure.a-hero img { width: 100%; max-height: 95mm; object-fit: cover; display: block; }
+figure.a-fig { margin: 5mm 0; text-align: center; page-break-inside: avoid; }
+figure.a-fig img { max-width: 100%; max-height: 115mm; }
+
+p.a-lead { margin: 5mm 0 0; padding: 3.5mm 5mm; background: var(--bg-warm); border-left: 2.2pt solid var(--amber-soft); font-size: 11pt; line-height: 1.7; color: #4c4a43; }
+
+.a-body { margin-top: 5.5mm; }
+.a-body > article { margin: 0; }
+.a-body p { margin: 0 0 0.6em; text-indent: 2em; text-align: justify; orphans: 2; widows: 2; }
+.a-body > article > p:first-child, .a-body > p:first-child { text-indent: 2em; }
+.a-body p + p { margin-top: 1.2mm; }
+.a-body ul, .a-body ol { margin: 2mm 0 2mm; padding-left: 7mm; }
+.a-body li { margin: 1.2mm 0; }
+.a-body li p { text-indent: 0; }
+.a-body h3 { font-family: var(--head-font); font-weight: 700; font-size: 15pt; color: var(--green); margin: 10mm 0 3.5mm; break-after: avoid; }
+.a-body h4 { font-family: var(--head-font); font-weight: 700; font-size: 12.5pt; color: #3a3a35; margin: 6mm 0 2.5mm; break-after: avoid; }
+.a-body blockquote { margin: 5mm 0; padding: 3mm 5mm; border-left: 2pt solid var(--line); color: #4c4a43; background: var(--bg-warm); }
+.a-body blockquote p { text-indent: 0; font-size: 11pt; line-height: 1.8; }
+.a-body img { max-width: 100%; }
+.a-body hr { border: none; border-top: 0.8pt solid var(--line); margin: 6mm 20mm; }
+.a-body code { font-family: var(--mono-font); font-size: 9.5pt; background: #f1efe8; padding: 0 2px; }
+.a-body pre { font-family: var(--mono-font); font-size: 9.5pt; line-height: 1.5; background: #f4f2ec; padding: 3.5mm 4mm; overflow: hidden; white-space: pre-wrap; word-break: break-all; }
+.a-body pre code { background: none; padding: 0; }
+.a-body table { border-collapse: collapse; width: 100%; font-size: 10pt; margin: 4mm 0; }
+.a-body th, .a-body td { border: 0.7pt solid var(--line); padding: 1.6mm 2.5mm; text-align: left; }
+.a-body th { background: var(--bg-warm); font-family: var(--head-font); }
+.a-body sup { font-size: 8pt; }
+span.elink { color: #3a6a8a; }
+span.pref { color: var(--green); }
+span.nref, .a-body s { }
+.nref { color: var(--amber); font-size: 10.5pt; }
+
+/* 文尾链接区 */
+.a-read { margin-top: 6mm; padding-top: 3mm; border-top: 0.8pt dashed var(--line); font-size: 10pt; color: #4c4a43; }
+.a-read-t { font-family: var(--head-font); font-size: 9pt; letter-spacing: 3px; color: var(--amber); }
+.a-read ul { margin: 2mm 0 0; padding-left: 5mm; }
+.a-read li { margin: 0.8mm 0; }
+.ldom { color: var(--light); font-family: var(--mono-font); font-size: 8pt; }
+.a-src { margin-top: 3mm; font-size: 10pt; color: var(--gray); }
+.a-fail { margin-top: 3mm; font-size: 9pt; color: var(--light); }
+
+/* 附件（存档/转载） */
+section.unit.attach { margin-top: 8mm; padding-top: 4mm; border-top: 1.6pt solid var(--amber-soft); }
+.at-kicker { font-family: var(--head-font); font-size: 9pt; letter-spacing: 4px; color: var(--amber); }
+h3.at-title { font-family: var(--head-font); font-weight: 700; font-size: 14.5pt; line-height: 1.4; color: var(--ink); margin: 2mm 0 1.5mm; }
+.at-meta { font-size: 9.5pt; color: var(--gray); word-break: break-all; }
+section.unit.ext .at-kicker { color: #3a6a8a; }
+section.unit.ext { border-top-color: #b9cdd9; }
+
+/* 辑内索引：本主题其余成员（标题＋所在卷），双栏省纸 */
+section.topic-index { margin-top: 9mm; padding-top: 4mm; border-top: 1.6pt solid var(--line); }
+.topic-index .ix-head { font-family: var(--head-font); font-size: 10pt; color: var(--gray); margin-bottom: 3mm; }
+.topic-index .ix-label { display: inline-block; font-size: 9pt; letter-spacing: 3px; color: var(--amber); border: 0.8pt solid var(--amber-soft); padding: 0.6mm 2.5mm; margin-right: 3mm; }
+ul.ix-list { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 9mm; font-size: 9.5pt; line-height: 1.55; }
+ul.ix-list li { display: flex; align-items: baseline; break-inside: avoid; margin: 0 0 0.9mm; }
+.ix-t { flex: 0 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 62mm; color: #2c2c2c; }
+.ix-dots { flex: 1 1 2mm; border-bottom: 0.6pt dotted #c4c0b4; margin: 0 1.5mm; transform: translateY(-0.8mm); }
+.ix-vol { flex: 0 0 auto; font-family: var(--head-font); font-size: 8.5pt; color: var(--amber); }
+
+/* 附录头（卷六存档补遗） */
+section.orphans-opener { break-before: page; padding-top: 58mm; text-align: center; }
+
+/* 卷末锚点索引页（装订时丢弃）：极小但可见、四栏密排，保证单页容纳全部锚点 */
+section.aux { page-break-before: always; columns: 4; column-gap: 6mm; }
+section.aux h2 { font-size: 6pt; margin: 0 0 2mm; column-span: all; }
+section.aux a { display: block; font-size: 4.5pt; line-height: 1.3; color: #333; text-decoration: none; }
+
+/* ============ 前件（封面/版权/目录） ============ */
+main.front { }
+section.cover {
+  width: 210mm; height: 297mm; overflow: hidden; position: relative;
+  background: radial-gradient(120% 105% at 18% 8%, #2a5c4b 0%, #204f40 46%, #173b30 100%);
+  color: #f4f3e8; font-family: var(--head-font);
+  display: flex; flex-direction: column; padding: 16mm 18mm 12mm; box-sizing: border-box;
+}
+.cover-top { display: flex; justify-content: space-between; font-size: 9.5pt; letter-spacing: 3px; color: #c5d8b8; }
+.cover-title { margin-top: 14mm; font-weight: 900; font-size: 52pt; line-height: 1.14; letter-spacing: 4px; }
+.cover-title em { font-style: normal; color: transparent; -webkit-text-stroke: 1.1pt #f4f3e8; letter-spacing: 10px; }
+.cover-title span { display: block; margin-top: 5mm; font-size: 12pt; font-weight: 400; letter-spacing: 3px; color: #c5d8b8; }
+.cover-vol-badge { display: inline-block; align-self: flex-start; margin-top: 7mm; padding: 1.8mm 5mm; border: 1pt solid var(--amber-soft); color: var(--amber-soft); font-size: 11pt; letter-spacing: 3px; }
+.cover-tagline { margin-top: 5mm; font-family: var(--body-font); font-size: 15pt; letter-spacing: 2px; color: #f4f3e8; }
+.cover-plate {
+  margin-top: 8mm; border: 0.9pt solid rgba(228, 226, 208, 0.32); padding: 8mm 9mm;
+  background-image: radial-gradient(#a4c6ac2b 0.35mm, transparent 0.5mm); background-size: 5.5mm 5.5mm;
+  display: flex; gap: 9mm; align-items: center;
+}
+.cp-num { flex: 0 0 auto; width: 34mm; height: 34mm; border-radius: 50%; border: 1.2pt solid var(--amber-soft); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.cp-num b { font-size: 19pt; color: var(--amber-soft); letter-spacing: 2px; font-weight: 600; }
+.cp-num i { font-style: normal; font-size: 8pt; letter-spacing: 3px; color: #c5d8b8; margin-top: 1mm; }
+.cp-list { flex: 1 1 auto; font-size: 10.5pt; line-height: 2.0; color: #e8e6da; letter-spacing: 1px; text-wrap: balance; }
+.cp-list b { color: var(--amber-soft); font-weight: 600; font-size: 10pt; letter-spacing: 3px; margin-right: 4mm; }
+.cover-main { margin-top: auto; }
+.cover-eyebrow { font-size: 9pt; letter-spacing: 5px; color: var(--amber-soft); margin-bottom: 2.5mm; }
+.cover-main h3 { margin: 0 0 2.5mm; font-size: 15pt; letter-spacing: 2px; font-weight: 700; }
+.cover-main p { margin: 0; font-size: 10.5pt; line-height: 1.8; color: #c9d6c0; }
+.cover-tail { margin-top: 8mm; padding-top: 4mm; border-top: 0.8pt solid rgba(228,226,208,0.28); display: flex; justify-content: space-between; align-items: flex-end; }
+.cover-tail .cn { font-family: var(--body-font); font-size: 11pt; letter-spacing: 1px; }
+.cover-tail .en { display: block; font-family: var(--head-font); font-size: 7.5pt; letter-spacing: 2.5px; color: #a9bfa5; margin-top: 1.2mm; }
+.cover-tail .meta { text-align: right; font-size: 8pt; line-height: 1.7; color: #a9bfa5; }
+
+section.colophon { break-before: page; padding: 14mm 26mm 8mm; }
+.colophon h2 { font-family: var(--head-font); font-size: 16pt; color: var(--green); margin: 0 0 5mm; }
+.colophon p { font-size: 10.5pt; line-height: 1.85; margin: 3mm 0; color: #2c2c2c; }
+.colophon-table { border-collapse: collapse; width: 100%; margin: 5mm 0; font-size: 10.5pt; }
+.colophon-table td { border: 0.7pt solid var(--line); padding: 2.4mm 4mm; }
+.colophon-table td:first-child { width: 26mm; background: var(--bg-warm); font-family: var(--head-font); color: var(--green); white-space: nowrap; }
+.colophon-note { font-size: 9.5pt; color: var(--gray); }
+
+section.toc { break-before: page; padding: 4mm 20mm 8mm; }
+h2.toc-h { font-family: var(--head-font); font-size: 20pt; letter-spacing: 14px; color: var(--green); margin: 2mm 0 4mm; }
+.toc-group { font-family: var(--head-font); font-weight: 700; font-size: 11.5pt; color: var(--green); margin: 5mm 0 1.5mm; break-after: avoid; }
+.toc-row { display: flex; align-items: baseline; font-size: 10.5pt; line-height: 1.6; margin: 0.9mm 0; }
+.toc-row.sub { font-size: 9.8pt; color: #4c4a43; }
+.toc-row.sub .toc-title::before { content: "附｜"; color: var(--amber); font-size: 8.5pt; }
+.toc-title { flex: 0 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 138mm; }
+.toc-dots { flex: 1 1 3mm; border-bottom: 0.7pt dotted #b8b4a8; margin: 0 2mm; transform: translateY(-1mm); }
+.toc-pg { flex: 0 0 auto; font-family: var(--head-font); font-size: 9.8pt; color: var(--gray); min-width: 8mm; text-align: right; }
+.toc-block { break-inside: avoid; }
+.toc-block.big { break-inside: auto; }
+
+a.toc-row { color: inherit; text-decoration: none; }
+figure.a-fig figcaption { font-family: var(--head-font); font-size: 9pt; color: var(--gray); margin-top: 1.5mm; letter-spacing: 0.5px; }
+
+/* —— 方案C：纸面细框 · 典藏版式（封面/封底共用）—— */
+/* —— 方案C：纸面细框 · 典藏版式 —— */
+section.cover-c, section.cover-c * { box-sizing: border-box; }
+section.cover-c { width: 210mm; height: 297mm; background: #f5f1e6; color: #1f4738;
+  font-family: "Noto Sans SC", sans-serif; padding: 12mm; box-sizing: border-box; }
+.cover-c .frame { height: 100%; border: 1.4pt solid #1f4738; outline: 0.5pt solid #1f473866; outline-offset: 2.2mm;
+  padding: 16mm 18mm 12mm; display: flex; flex-direction: column; position: relative; }
+.cover-c .top { display: flex; justify-content: space-between; font-size: 9.5pt; letter-spacing: 3px; color: #3d6a58; }
+.cover-c .center { margin-top: 13mm; text-align: center; }
+.cover-c .emblem { width: 26mm; height: 26mm; border-radius: 50%; border: 1.2pt solid #b98a2e; margin: 0 auto 7mm;
+  display: flex; align-items: center; justify-content: center; flex-direction: column; }
+.cover-c .emblem b { font-size: 15pt; color: #a0781f; }
+.cover-c .emblem i { font-style: normal; font-size: 6.5pt; letter-spacing: 3px; color: #6b8279; }
+.cover-c h1 { font-size: 40pt; font-weight: 900; letter-spacing: 6px; color: #1f4738; }
+.cover-c .h2x { font-size: 22pt; font-weight: 400; letter-spacing: 16px; color: #a0781f;
+  margin-top: 6mm; font-family: "Noto Serif SC", serif; text-indent: 16px; }
+.cover-c .rule { width: 30mm; height: 1pt; background: #b98a2e; margin: 9mm auto; }
+.cover-c .tagline { font-family: "Noto Serif SC", serif; font-size: 13pt; letter-spacing: 3px; color: #2c5647; }
+.cover-c .desc { margin: 7mm auto 0; max-width: 128mm; font-size: 10pt; line-height: 1.95; color: #52705f; text-align: justify; }
+.cover-c .themes { margin-top: 8mm; font-size: 9.5pt; letter-spacing: 2px; color: #3d6a58; }
+.cover-c .bottom { margin-top: auto; text-align: center; }
+.cover-c .bottom .src { font-family: "Noto Serif SC", serif; font-size: 10.5pt; color: #2c5647; }
+.cover-c .bottom .en { font-size: 7pt; letter-spacing: 2.5px; color: #6b8279; margin-top: 1.5mm; }
+.cover-c .bottom .meta { font-size: 7.5pt; color: #6b8279; margin-top: 1.5mm; }

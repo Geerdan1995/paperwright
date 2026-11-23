@@ -1,65 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1568" height="300" viewBox="0 0 1568 300" font-family="Segoe UI, sans-serif">
-<rect width="1568" height="300" fill="#f5f1e6"/>
-<text x="40" y="52" font-size="26" font-weight="700" fill="#204f40">The pipeline</text>
-<rect x="40" y="64" width="46" height="3" fill="#b0852e"/>
-<rect x="40" y="104" width="168" height="118" rx="10" fill="#ffffff" stroke="#204f4055" stroke-width="1.2"/>
-<circle cx="66" cy="132" r="15" fill="#204f40"/>
-<text x="66" y="137" font-size="15" fill="#f5f1e6" text-anchor="middle" font-weight="700">0</text>
-<text x="90" y="137" font-size="16" font-weight="700" fill="#204f40">RECON</text>
-<text x="54" y="166" font-size="11.5" fill="#5a6b60">index</text>
-<text x="54" y="185" font-size="11.5" fill="#5a6b60">inventory</text>
-<text x="54" y="204" font-size="11.5" fill="#5a6b60">scope sign-off</text>
-<path d="M210,158 l8,5 l-8,5" fill="none" stroke="#b0852e" stroke-width="2"/>
-<line x1="204" y1="163" x2="217" y2="163" stroke="#b0852e" stroke-width="2"/>
-<rect x="224" y="104" width="168" height="118" rx="10" fill="#ffffff" stroke="#204f4055" stroke-width="1.2"/>
-<circle cx="250" cy="132" r="15" fill="#204f40"/>
-<text x="250" y="137" font-size="15" fill="#f5f1e6" text-anchor="middle" font-weight="700">1</text>
-<text x="274" y="137" font-size="16" font-weight="700" fill="#204f40">CRAWL</text>
-<text x="238" y="166" font-size="11.5" fill="#5a6b60">concurrent fetch</text>
-<text x="238" y="185" font-size="11.5" fill="#5a6b60">stealth recipes</text>
-<path d="M394,158 l8,5 l-8,5" fill="none" stroke="#b0852e" stroke-width="2"/>
-<line x1="388" y1="163" x2="401" y2="163" stroke="#b0852e" stroke-width="2"/>
-<rect x="408" y="104" width="168" height="118" rx="10" fill="#ffffff" stroke="#204f4055" stroke-width="1.2"/>
-<circle cx="434" cy="132" r="15" fill="#204f40"/>
-<text x="434" y="137" font-size="15" fill="#f5f1e6" text-anchor="middle" font-weight="700">2</text>
-<text x="458" y="137" font-size="16" font-weight="700" fill="#204f40">CLEAN</text>
-<text x="422" y="166" font-size="11.5" fill="#5a6b60">DOM → print fragments</text>
-<text x="422" y="185" font-size="11.5" fill="#5a6b60">images</text>
-<path d="M578,158 l8,5 l-8,5" fill="none" stroke="#b0852e" stroke-width="2"/>
-<line x1="572" y1="163" x2="585" y2="163" stroke="#b0852e" stroke-width="2"/>
-<rect x="592" y="104" width="168" height="118" rx="10" fill="#ffffff" stroke="#204f4055" stroke-width="1.2"/>
-<circle cx="618" cy="132" r="15" fill="#204f40"/>
-<text x="618" y="137" font-size="15" fill="#f5f1e6" text-anchor="middle" font-weight="700">3</text>
-<text x="642" y="137" font-size="16" font-weight="700" fill="#204f40">BIND</text>
-<text x="606" y="166" font-size="11.5" fill="#5a6b60">front / body / --paged / --back</text>
-<path d="M762,158 l8,5 l-8,5" fill="none" stroke="#b0852e" stroke-width="2"/>
-<line x1="756" y1="163" x2="769" y2="163" stroke="#b0852e" stroke-width="2"/>
-<rect x="776" y="104" width="168" height="118" rx="10" fill="#ffffff" stroke="#204f4055" stroke-width="1.2"/>
-<circle cx="802" cy="132" r="15" fill="#204f40"/>
-<text x="802" y="137" font-size="15" fill="#f5f1e6" text-anchor="middle" font-weight="700">4</text>
-<text x="826" y="137" font-size="16" font-weight="700" fill="#204f40">RENDER</text>
-<text x="790" y="166" font-size="11.5" fill="#5a6b60">Chromium native or paged.js</text>
-<path d="M946,158 l8,5 l-8,5" fill="none" stroke="#b0852e" stroke-width="2"/>
-<line x1="940" y1="163" x2="953" y2="163" stroke="#b0852e" stroke-width="2"/>
-<rect x="960" y="104" width="168" height="118" rx="10" fill="#ffffff" stroke="#204f4055" stroke-width="1.2"/>
-<circle cx="986" cy="132" r="15" fill="#204f40"/>
-<text x="986" y="137" font-size="15" fill="#f5f1e6" text-anchor="middle" font-weight="700">5</text>
-<text x="1010" y="137" font-size="16" font-weight="700" fill="#204f40">PAGE-MAP</text>
-<text x="974" y="166" font-size="11.5" fill="#5a6b60">two-pass aux links / DOM-measured</text>
-<path d="M1130,158 l8,5 l-8,5" fill="none" stroke="#b0852e" stroke-width="2"/>
-<line x1="1124" y1="163" x2="1137" y2="163" stroke="#b0852e" stroke-width="2"/>
-<rect x="1144" y="104" width="168" height="118" rx="10" fill="#ffffff" stroke="#204f4055" stroke-width="1.2"/>
-<circle cx="1170" cy="132" r="15" fill="#204f40"/>
-<text x="1170" y="137" font-size="15" fill="#f5f1e6" text-anchor="middle" font-weight="700">6</text>
-<text x="1194" y="137" font-size="16" font-weight="700" fill="#204f40">MERGE</text>
-<text x="1158" y="166" font-size="11.5" fill="#5a6b60">pdf-lib + outline</text>
-<text x="1158" y="185" font-size="11.5" fill="#5a6b60">clickable TOC</text>
-<path d="M1314,158 l8,5 l-8,5" fill="none" stroke="#b0852e" stroke-width="2"/>
-<line x1="1308" y1="163" x2="1321" y2="163" stroke="#b0852e" stroke-width="2"/>
-<rect x="1328" y="104" width="168" height="118" rx="10" fill="#ffffff" stroke="#204f4055" stroke-width="1.2"/>
-<circle cx="1354" cy="132" r="15" fill="#204f40"/>
-<text x="1354" y="137" font-size="15" fill="#f5f1e6" text-anchor="middle" font-weight="700">7</text>
-<text x="1378" y="137" font-size="16" font-weight="700" fill="#204f40">QA</text>
-<text x="1342" y="166" font-size="11.5" fill="#5a6b60">edge inspection</text>
-<text x="1342" y="185" font-size="11.5" fill="#5a6b60">text layer</text>
+<defs><radialGradient id="g" cx="18%" cy="10%" r="120%">
+<stop offset="0%" stop-color="#2a5c4b"/><stop offset="55%" stop-color="#204f40"/><stop offset="100%" stop-color="#122c23"/>
+</radialGradient></defs>
+<rect width="1568" height="300" fill="url(#g)"/>
+<text x="40" y="52" font-size="26" font-weight="700" fill="#f4f3e8">The pipeline</text>
+<rect x="40" y="64" width="46" height="3" fill="#e3c273"/>
+<rect x="40" y="104" width="168" height="118" rx="10" fill="#f4f3e814" stroke="#f4f3e83d" stroke-width="1"/>
+<circle cx="66" cy="132" r="15" fill="none" stroke="#e3c273" stroke-width="1.2"/>
+<text x="66" y="137" font-size="15" fill="#e3c273" text-anchor="middle" font-weight="700">0</text>
+<text x="90" y="137" font-size="16" font-weight="700" fill="#f4f3e8">RECON</text>
+<text x="54" y="166" font-size="11.5" fill="#a9bfa5">index</text>
+<text x="54" y="185" font-size="11.5" fill="#a9bfa5">inventory</text>
+<text x="54" y="204" font-size="11.5" fill="#a9bfa5">scope sign-off</text>
+<line x1="206" y1="163" x2="218" y2="163" stroke="#e3c273" stroke-width="2"/>
+<path d="M218,158 l8,5 l-8,5" fill="none" stroke="#e3c273" stroke-width="2"/>
+<rect x="224" y="104" width="168" height="118" rx="10" fill="#f4f3e814" stroke="#f4f3e83d" stroke-width="1"/>
+<circle cx="250" cy="132" r="15" fill="none" stroke="#e3c273" stroke-width="1.2"/>
+<text x="250" y="137" font-size="15" fill="#e3c273" text-anchor="middle" font-weight="700">1</text>
+<text x="274" y="137" font-size="16" font-weight="700" fill="#f4f3e8">CRAWL</text>
+<text x="238" y="166" font-size="11.5" fill="#a9bfa5">concurrent fetch</text>
+<text x="238" y="185" font-size="11.5" fill="#a9bfa5">stealth recipes</text>
+<line x1="390" y1="163" x2="402" y2="163" stroke="#e3c273" stroke-width="2"/>
+<path d="M402,158 l8,5 l-8,5" fill="none" stroke="#e3c273" stroke-width="2"/>
+<rect x="408" y="104" width="168" height="118" rx="10" fill="#f4f3e814" stroke="#f4f3e83d" stroke-width="1"/>
+<circle cx="434" cy="132" r="15" fill="none" stroke="#e3c273" stroke-width="1.2"/>
+<text x="434" y="137" font-size="15" fill="#e3c273" text-anchor="middle" font-weight="700">2</text>
+<text x="458" y="137" font-size="16" font-weight="700" fill="#f4f3e8">CLEAN</text>
+<text x="422" y="166" font-size="11.5" fill="#a9bfa5">DOM → print fragments</text>
+<text x="422" y="185" font-size="11.5" fill="#a9bfa5">images</text>
+<line x1="574" y1="163" x2="586" y2="163" stroke="#e3c273" stroke-width="2"/>
+<path d="M586,158 l8,5 l-8,5" fill="none" stroke="#e3c273" stroke-width="2"/>
+<rect x="592" y="104" width="168" height="118" rx="10" fill="#f4f3e814" stroke="#f4f3e83d" stroke-width="1"/>
+<circle cx="618" cy="132" r="15" fill="none" stroke="#e3c273" stroke-width="1.2"/>
+<text x="618" y="137" font-size="15" fill="#e3c273" text-anchor="middle" font-weight="700">3</text>
+<text x="642" y="137" font-size="16" font-weight="700" fill="#f4f3e8">BIND</text>
+<text x="606" y="166" font-size="11.5" fill="#a9bfa5">front / body / --paged / --back</text>
+<line x1="758" y1="163" x2="770" y2="163" stroke="#e3c273" stroke-width="2"/>
+<path d="M770,158 l8,5 l-8,5" fill="none" stroke="#e3c273" stroke-width="2"/>
+<rect x="776" y="104" width="168" height="118" rx="10" fill="#f4f3e814" stroke="#f4f3e83d" stroke-width="1"/>
+<circle cx="802" cy="132" r="15" fill="none" stroke="#e3c273" stroke-width="1.2"/>
+<text x="802" y="137" font-size="15" fill="#e3c273" text-anchor="middle" font-weight="700">4</text>
+<text x="826" y="137" font-size="16" font-weight="700" fill="#f4f3e8">RENDER</text>
+<text x="790" y="166" font-size="11.5" fill="#a9bfa5">Chromium native or paged.js</text>
+<line x1="942" y1="163" x2="954" y2="163" stroke="#e3c273" stroke-width="2"/>
+<path d="M954,158 l8,5 l-8,5" fill="none" stroke="#e3c273" stroke-width="2"/>
+<rect x="960" y="104" width="168" height="118" rx="10" fill="#f4f3e814" stroke="#f4f3e83d" stroke-width="1"/>
+<circle cx="986" cy="132" r="15" fill="none" stroke="#e3c273" stroke-width="1.2"/>
+<text x="986" y="137" font-size="15" fill="#e3c273" text-anchor="middle" font-weight="700">5</text>
+<text x="1010" y="137" font-size="16" font-weight="700" fill="#f4f3e8">PAGE-MAP</text>
+<text x="974" y="166" font-size="11.5" fill="#a9bfa5">two-pass aux / DOM-measured</text>
+<line x1="1126" y1="163" x2="1138" y2="163" stroke="#e3c273" stroke-width="2"/>
+<path d="M1138,158 l8,5 l-8,5" fill="none" stroke="#e3c273" stroke-width="2"/>
+<rect x="1144" y="104" width="168" height="118" rx="10" fill="#f4f3e814" stroke="#f4f3e83d" stroke-width="1"/>
+<circle cx="1170" cy="132" r="15" fill="none" stroke="#e3c273" stroke-width="1.2"/>
+<text x="1170" y="137" font-size="15" fill="#e3c273" text-anchor="middle" font-weight="700">6</text>
+<text x="1194" y="137" font-size="16" font-weight="700" fill="#f4f3e8">MERGE</text>
+<text x="1158" y="166" font-size="11.5" fill="#a9bfa5">pdf-lib + outline</text>
+<text x="1158" y="185" font-size="11.5" fill="#a9bfa5">clickable TOC</text>
+<line x1="1310" y1="163" x2="1322" y2="163" stroke="#e3c273" stroke-width="2"/>
+<path d="M1322,158 l8,5 l-8,5" fill="none" stroke="#e3c273" stroke-width="2"/>
+<rect x="1328" y="104" width="168" height="118" rx="10" fill="#f4f3e814" stroke="#f4f3e83d" stroke-width="1"/>
+<circle cx="1354" cy="132" r="15" fill="none" stroke="#e3c273" stroke-width="1.2"/>
+<text x="1354" y="137" font-size="15" fill="#e3c273" text-anchor="middle" font-weight="700">7</text>
+<text x="1378" y="137" font-size="16" font-weight="700" fill="#f4f3e8">QA</text>
+<text x="1342" y="166" font-size="11.5" fill="#a9bfa5">edge inspection</text>
+<text x="1342" y="185" font-size="11.5" fill="#a9bfa5">text layer</text>
 </svg>
